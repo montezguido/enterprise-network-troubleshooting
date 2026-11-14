@@ -1,5 +1,24 @@
 # Enterprise Network Troubleshooting & Diagnostics
 
+[![Verify independent network triage](https://github.com/montezguido/enterprise-network-troubleshooting/actions/workflows/verify-triage.yml/badge.svg?branch=main)](https://github.com/montezguido/enterprise-network-troubleshooting/actions/workflows/verify-triage.yml)
+
+## Recruiter quick start — independent, executable Python
+
+This repository preserves a sanitized WGU troubleshooting case study **and** contains a separate, independently written [network-triage exercise](portfolio_demo/README.md) with fictional observations. Run with Python 3.11+ from the repository root:
+
+```bash
+python portfolio_demo/triage.py
+python -m unittest discover -s tests -v
+```
+
+[Python source](portfolio_demo/triage.py) · [Six synthetic cases](portfolio_demo/sample_cases.json) · [28 regression tests](tests/test_triage.py) · [Evidence map](docs/evidence-map.md) · [Cross-platform CI](.github/workflows/verify-triage.yml)
+
+The tool suggests candidate fault domains and next diagnostic steps; it **does not capture traffic, probe real networks, change devices, or prove a root cause**. The completed academic cases are historical experience, while the runnable Python and CI results are separate evidence of independently developed software.
+
+---
+
+## Original WGU troubleshooting case study
+
 ## Overview
 
 This repository presents a sanitized hands-on network troubleshooting case study built around six different failure and security scenarios. The work focuses on systematic diagnosis rather than guesswork: establish the symptom, narrow the scope, gather evidence with the appropriate tool, isolate the root cause, apply a targeted correction, and verify the result.
@@ -357,7 +376,7 @@ A fully reproducible public extension of this repository could add original labs
 - DNS misconfiguration and recovery using containerized DNS services
 - OPNsense firewall-policy testing
 - Linux service-exposure auditing
-- Automated diagnostic collection with Python
+- Expanded **live** diagnostic collection with Python (the current [offline reasoning exercise](portfolio_demo/README.md) is already available)
 - Before/after verification scripts
 - A troubleshooting decision tree for common Layer 2–7 failures
 
