@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "id": "suspicious-file-transfer",
+      "observations": {
+        "link_up": true,
+        "ip_configuration_valid": true,
+        "gateway_reachable": true,
+        "dns_answer_expected": null,
+        "remote_ip_reachable": null,
+        "application_port_reachable": null,
+        "firewall_deny_logged": null,
+        "unexpected_traffic": true,
+        "unexpected_listening_ports": []
+      }
+    },
+    {
+      "id": "incorrect-dns-answer",
+      "observations": {
+        "link_up": true,
+        "ip_configuration_valid": true,
+        "gateway_reachable": true,
+        "dns_answer_expected": false,
+        "remote_ip_reachable": null,
+        "application_port_reachable": null,
+        "firewall_deny_logged": null,
+        "unexpected_traffic": null,
+        "unexpected_listening_ports": []
+      }
+    },
+    {
+      "id": "external-route-failure",
+      "observations": {
+        "link_up": true,
+        "ip_configuration_valid": true,
+        "gateway_reachable": true,
+        "dns_answer_expected": null,
+        "remote_ip_reachable": false,
+        "application_port_reachable": null,
+        "firewall_deny_logged": null,
+        "unexpected_traffic": null,
+        "unexpected_listening_ports": []
+      }
+    },
+    {
+      "id": "invalid-endpoint-addressing",
+      "observations": {
+        "link_up": true,
+        "ip_configuration_valid": false,
+        "gateway_reachable": false,
+        "dns_answer_expected": null,
+        "remote_ip_reachable": null,
+        "application_port_reachable": null,
+        "firewall_deny_logged": null,
+        "unexpected_traffic": null,
+        "unexpected_listening_ports": []
+      }
+    },
+    {
+      "id": "dmz-firewall-denied",
+      "observations": {
+        "link_up": true,
+        "ip_configuration_valid": true,
+        "gateway_reachable": true,
+        "dns_answer_expected": null,
+        "remote_ip_reachable": true,
+        "application_port_reachable": false,
+        "firewall_deny_logged": true,
+        "unexpected_traffic": null,
+        "unexpected_listening_ports": []
+      }
+    },
+    {
+      "id": "unexpected-listener",
+      "observations": {
+        "link_up": true,
+        "ip_configuration_valid": true,
+        "gateway_reachable": null,
+        "dns_answer_expected": null,
+        "remote_ip_reachable": null,
+        "application_port_reachable": null,
+        "firewall_deny_logged": null,
+        "unexpected_traffic": null,
+        "unexpected_listening_ports": [
+          4444
+        ]
+      }
+    }
+  ]
+}
