@@ -177,8 +177,9 @@ class TriageTests(unittest.TestCase):
         with StringIO() as capture:
             with redirect_stdout(capture):
                 status = main([])
+            output = capture.getvalue()
         self.assertEqual(status, 0)
-        self.assertIn("hypotheses, not verified root causes", capture.getvalue())
+        self.assertIn("hypotheses, not verified root causes", output)
 
 
 if __name__ == "__main__":
