@@ -17,9 +17,7 @@ The tool suggests candidate fault domains and next diagnostic steps; it **does n
 
 ---
 
-## Original WGU troubleshooting case study
-
-## Overview
+## Original WGU troubleshooting case study — Overview
 
 This repository presents a sanitized hands-on network troubleshooting case study built around six different failure and security scenarios. The work focuses on systematic diagnosis rather than guesswork: establish the symptom, narrow the scope, gather evidence with the appropriate tool, isolate the root cause, apply a targeted correction, and verify the result.
 
